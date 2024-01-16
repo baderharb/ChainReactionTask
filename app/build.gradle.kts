@@ -34,12 +34,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
-
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
     buildFeatures {
@@ -49,13 +48,19 @@ android {
 }
 
 dependencies {
-    /*implementation(project(":features:splash:presentation"))
+    implementation(project(":features:splash:presentation"))
+
     implementation(project(":features:main:presentation"))
+
     implementation(project(":features:auth:presentation"))
+
     implementation(project(":features:news:presentation"))
+
     implementation(project(":features:more:presentation"))
+
     implementation(project(":core:component"))
-    implementation(project(":core:storage"))*/
+
+    implementation(project(":core:storage"))
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
